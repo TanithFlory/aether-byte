@@ -1,27 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  --clr-primary: #1c1e53;
+  --clr-secondary: #eef4fa;
+  --clr-text: #bbbbcb;
+  --clr-white: #fff;
+  /* --step--2: clamp(0.69rem, calc(0.65rem + 0.19vw), 0.80rem); */
+  --fs-200: clamp(0.78rem, calc(0.7rem + 0.39vw), 1rem);
+  --fs-300: clamp(0.88rem, calc(0.74rem + 0.65vw), 1.25rem);
+  --fs-400: clamp(0.98rem, calc(0.78rem + 1.01vw), 1.56rem);
+  --fs-500: clamp(1.11rem, calc(0.81rem + 1.47vw), 1.95rem);
+  /* --fs-600: clamp(1.25rem, calc(0.83rem + 2.08vw), 2.44rem); */
+  --fs-700: clamp(1.4rem, calc(0.83rem + 2.87vw), 3.05rem);
+  --fs-800: clamp(1.58rem, calc(0.8rem + 3.89vw), 3.82rem);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --lh-custom: clamp(2.58rem, calc(0.8rem + 4.89vw), 4.82rem);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Manrope", sans-serif;
+  color: white;
 }
