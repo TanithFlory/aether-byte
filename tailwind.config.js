@@ -11,6 +11,8 @@ module.exports = {
       secondary: "var(--clr-secondary)",
       "clr-text": "var(--clr-text)",
       white: "var(--clr-white)",
+      black: "var(--clr-black)",
+      darkblue: "var(--clr-darkblue)",
     },
     fontSize: {
       "fs-200": "var(--fs-200)",
