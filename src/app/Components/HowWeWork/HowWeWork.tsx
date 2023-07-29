@@ -1,5 +1,6 @@
 import images from "@/app/Constants/images";
 import Image from "next/image";
+import HowWeWorkCard from "./HowWeWorkCard";
 
 function HowWeWork() {
   const cardDetails = [
@@ -39,20 +40,11 @@ function HowWeWork() {
         <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-10 w-full max-w-[670px] place-items-center">
           {cardDetails.map((data, index) => {
             return (
-              <div className="max-w-[280px]" key={index}>
-                <div className="relative inline-block">
-                  <Image
-                    src={images.numberBg}
-                    alt="number"
-                    className="bg-[#2405F2] rounded-xl"
-                  />
-                  <span className="font-bold text-white absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                    0{index + 1}
-                  </span>
-                </div>
-                <h3 className="text-fs-500 font-bold">{data.title}</h3>
-                <p>{data.desc}</p>
-              </div>
+              <HowWeWorkCard
+                title={data.title}
+                desc={data.desc}
+                index={index}
+              />
             );
           })}
         </div>
