@@ -1,3 +1,4 @@
+import Features from "./Components/Features/Features";
 import Header from "./Components/Header/Header";
 import HowWeWork from "./Components/HowWeWork/HowWeWork";
 export default function Home() {
@@ -5,6 +6,7 @@ export default function Home() {
     <>
       <Header />
       <HowWeWork />
+      <Features />
     </>
   );
 }
