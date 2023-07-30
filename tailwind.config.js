@@ -19,6 +19,7 @@ module.exports = {
       "fs-300": "var(--fs-300)",
       "fs-400": "var(--fs-400)",
       "fs-500": "var(--fs-500)",
+      "fs-600": "var(--fs-600)",
       "fs-700": "var(--fs-700)",
       "fs-800": "var(--fs-800)",
       "lh-custom": "var(--lh-custom)",
