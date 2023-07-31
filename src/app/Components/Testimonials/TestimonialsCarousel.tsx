@@ -1,6 +1,6 @@
 "use client";
 
-import { SectionWrapper } from "@/app/Utils/SectionWrapper";
+import { WrapperDiv } from "@/app/Utils/WrapperDiv";
 import CarouselControls from "./CarouselControls";
 import { useEffect, useRef, useState } from "react";
 import testimonialsData from "./Testimonials.data";
@@ -74,7 +74,7 @@ function TestimonialsCarousel() {
 
   return (
     <section className="bg-secondary text-black p-4">
-      <SectionWrapper className="py-24 gap-6">
+      <WrapperDiv className="py-24 gap-6">
         <div className="max-w-[327px]">
           <h2 className="text-fs-600 font-bold">
             What our clients say about us
@@ -104,7 +104,7 @@ function TestimonialsCarousel() {
             handleCarouselScroll={handleCarouselScroll}
           />
         </div>
-      </SectionWrapper>
+      </WrapperDiv>
     </section>
   );
 }

@@ -1,10 +1,10 @@
 import Image from "next/image";
 import images from "@/app/Constants/images";
-import { SectionWrapper } from "@/app/Utils/SectionWrapper";
+import { WrapperDiv } from "@/app/Utils/WrapperDiv";
 function Header() {
   return (
     <header className="bg-primary min-h-[700px]">
-      <SectionWrapper className="gap-4 pb-3 items-center min-h-[700px] pt-[92px]">
+      <WrapperDiv className="gap-4 pb-3 items-center min-h-[700px] pt-[92px]">
         <div className="max-w-[582px]">
           <h1 className="text-fs-800 font-bold text-center lg:leading-[72px]">
             Providing stellar tech solutions for early startups!
@@ -22,7 +22,7 @@ function Header() {
             height={361}
           />
         </div>
-      </SectionWrapper>
+      </WrapperDiv>
     </header>
   );
 }

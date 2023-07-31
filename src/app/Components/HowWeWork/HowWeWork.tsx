@@ -1,12 +1,12 @@
 import images from "@/app/Constants/images";
 import Image from "next/image";
-import { SectionWrapper } from "@/app/Utils/SectionWrapper";
+import { WrapperDiv } from "@/app/Utils/WrapperDiv";
 import HowWeWorkCards from "./HowWeWorkCards";
 
 function HowWeWork() {
   return (
     <section className="bg-secondary text-black p-1">
-      <SectionWrapper className="gap-20 py-24">
+      <WrapperDiv className="gap-20 py-24">
         <div className="max-w-[405px] flex flex-col gap-4">
           <h2 className="text-fs-700 font-bold">How we work</h2>
           <p>
@@ -23,7 +23,7 @@ function HowWeWork() {
         <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-10 w-full max-w-[670px] place-items-center">
           <HowWeWorkCards />
         </div>
-      </SectionWrapper>
+      </WrapperDiv>
     </section>
   );
 }
