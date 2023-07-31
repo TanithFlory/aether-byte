@@ -14,15 +14,28 @@ function TestimonialsCarousel() {
     right: true,
     count: 0,
   });
+  let autoScrollInterval: NodeJS.Timer;
 
-  function handleCarouselChange(identifier: number) {
-    setCarouselButton((prev) => ({
-      ...prev,
-      count: identifier ? ++prev.count : --prev.count,
-    }));
-
+  function handleCarouselScroll(identifier: number) {
     if (carouselRef.current) {
-      const { offsetWidth } = carouselRef.current;
+      clearInterval(autoScrollInterval);
+
+      setCarouselButton((prev) => ({
+        ...prev,
+        count: identifier ? ++prev.count : --prev.count,
+      }));
+
+      const { offsetWidth, style } = carouselRef.current;
+
+      if (carouselButton.count === testimonialsData.length - 1 && identifier===3) {
+        style.transform = "translateX(0px)";
+        setCarouselScroll(0);
+        setCarouselButton((prev) => ({
+          ...prev,
+          count: 0,
+        }));
+        return;
+      }
 
       const translateXValue = identifier
         ? carouselScroll - offsetWidth
@@ -30,7 +43,7 @@ function TestimonialsCarousel() {
 
       setCarouselScroll(translateXValue);
 
-      carouselRef.current.style.transform = `translateX(${translateXValue}px)`;
+      style.transform = `translateX(${translateXValue}px)`;
     }
   }
 
@@ -46,6 +59,16 @@ function TestimonialsCarousel() {
 
     return () => {
       setCarouselButton((prev) => ({ ...prev, right: true, left: true }));
+    };
+  }, [carouselScroll]);
+
+  useEffect(() => {
+    autoScrollInterval = setInterval(() => {
+      handleCarouselScroll(3);
+    }, 10000);
+
+    return () => {
+      clearInterval(autoScrollInterval);
     };
   }, [carouselScroll]);
 
@@ -68,6 +91,7 @@ function TestimonialsCarousel() {
             {testimonialsData.map((data) => {
               return (
                 <TestimonialsCard
+                  key={data.id}
                   name={data.name}
                   desc={data.desc}
                   role={data.role}
@@ -77,7 +101,7 @@ function TestimonialsCarousel() {
           </div>
           <CarouselControls
             carouselButton={carouselButton}
-            handleCarouselChange={handleCarouselChange}
+            handleCarouselScroll={handleCarouselScroll}
           />
         </div>
       </SectionWrapper>
