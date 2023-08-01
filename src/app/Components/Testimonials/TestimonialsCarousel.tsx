@@ -21,14 +21,14 @@ function TestimonialsCarousel() {
       const { style } = carouselRef.current;
       style.transform = "translateX(0px)";
       setCarouselScroll(0);
+      console.log(carouselScroll);
       setCarouselButton((prev) => ({
         ...prev,
         count: 0,
       }));
-      return;
     }
   }
-  
+
   function handleCarouselScroll(identifier: number) {
     if (carouselRef.current) {
       clearInterval(autoScrollInterval);
@@ -39,6 +39,7 @@ function TestimonialsCarousel() {
         identifier === 3
       ) {
         resetCarousel();
+        return;
       }
 
       setCarouselButton((prev) => ({
