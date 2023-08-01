@@ -70,7 +70,7 @@ function TestimonialsCarousel() {
     return () => {
       setCarouselButton((prev) => ({ ...prev, right: true, left: true }));
     };
-  }, [carouselScroll]);
+  }, [carouselButton.count]);
 
   //auto-scroll for the carousel, resetting translateX values incase of window resize.
   useEffect(() => {
