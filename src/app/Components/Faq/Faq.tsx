@@ -6,10 +6,10 @@ function Faq() {
   return (
     <section className="bg-primary text-white px-4">
       <WrapperDiv className="py-24 gap-6">
-        <div className="max-w-[405px]">
+        <div className="max-w-[327px]">
           <h2 className="text-fs-600 font-bold">Frequently asked questions</h2>
         </div>
-        <div className="max-w-[700px]">
+        <div className="max-w-[843px]">
           {faqData.map(({ question, answer, id }) => {
             return (
               <FaqCard key={id} question={question} id={id} answer={answer} />

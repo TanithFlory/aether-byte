@@ -10,15 +10,21 @@ function FaqCard({ question, answer, id }: IProps) {
   const [expand, setExpand] = useState(false);
   return (
     <div
-      className={`pb-4 mb-4 border-b-[#808080] ${id < 5 ? "border-b-[1px]" : ""}`}
+      className={`pb-4 mb-4 border-b-[#808080] ${
+        id < 5 ? "border-b-[1px]" : ""
+      }`}
     >
-      <div className="flex items-center justify-between">
-        <div className="flex cursor-pointer">
-          <span className="text-fs-400 text-secondary font-bold">0{id}</span>
-          <div
-            className="text-fs-400 font-bold px-10"
-            onClick={() => setExpand((prev) => !prev)}
-          >
+      <div
+        className={`flex items-center justify-between cursor-pointer hover:text-lightGreen ${
+          expand ? "text-lightGreen" : ""
+        }`}
+        onClick={() => setExpand((prev) => !prev)}
+      >
+        <div className="flex">
+          <div className="text-fs-400 font-bold">
+            0{id}
+          </div>
+          <div className="text-fs-400 font-bold px-10">
             {question}
           </div>
         </div>
@@ -27,7 +33,7 @@ function FaqCard({ question, answer, id }: IProps) {
             expand ? "rotate-[135deg]" : ""
           }`}
         >
-          <AiOutlinePlus className="stroke-[5%]" />
+          <AiOutlinePlus className="stroke-[10%]" />
         </div>
       </div>
       <div

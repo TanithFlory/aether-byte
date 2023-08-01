@@ -13,6 +13,7 @@ module.exports = {
       white: "var(--clr-white)",
       black: "var(--clr-black)",
       darkblue: "var(--clr-darkblue)",
+      lightGreen: "var(--clr-l-green)",
     },
     fontSize: {
       "fs-200": "var(--fs-200)",
