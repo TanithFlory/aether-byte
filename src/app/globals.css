@@ -25,3 +25,7 @@ body {
   font-family: "Manrope", sans-serif;
   color: white;
 }
+
+.grid-transition {
+  transition: grid-template-rows 500ms;
+}
