@@ -16,26 +16,35 @@ function TestimonialsCarousel() {
   });
   let autoScrollInterval: NodeJS.Timer;
 
+  function resetCarousel() {
+    if (carouselRef.current) {
+      const { style } = carouselRef.current;
+      style.transform = "translateX(0px)";
+      setCarouselScroll(0);
+      setCarouselButton((prev) => ({
+        ...prev,
+        count: 0,
+      }));
+      return;
+    }
+  }
+  
   function handleCarouselScroll(identifier: number) {
     if (carouselRef.current) {
       clearInterval(autoScrollInterval);
+      const { offsetWidth, style } = carouselRef.current;
+
+      if (
+        carouselButton.count === testimonialsData.length - 1 &&
+        identifier === 3
+      ) {
+        resetCarousel();
+      }
 
       setCarouselButton((prev) => ({
         ...prev,
         count: identifier ? ++prev.count : --prev.count,
       }));
-
-      const { offsetWidth, style } = carouselRef.current;
-
-      if (carouselButton.count === testimonialsData.length - 1 && identifier===3) {
-        style.transform = "translateX(0px)";
-        setCarouselScroll(0);
-        setCarouselButton((prev) => ({
-          ...prev,
-          count: 0,
-        }));
-        return;
-      }
 
       const translateXValue = identifier
         ? carouselScroll - offsetWidth
@@ -62,13 +71,16 @@ function TestimonialsCarousel() {
     };
   }, [carouselScroll]);
 
+  //auto-scroll for the carousel, resetting translateX values incase of window resize.
   useEffect(() => {
+    window.addEventListener("resize", resetCarousel);
     autoScrollInterval = setInterval(() => {
       handleCarouselScroll(3);
     }, 10000);
 
     return () => {
       clearInterval(autoScrollInterval);
+      window.removeEventListener("resize", resetCarousel);
     };
   }, [carouselScroll]);
 
