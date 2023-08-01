@@ -20,7 +20,7 @@ function HowWeWork() {
             <Image src={images.arrowRight} alt="Arrow Right" />
           </div>
         </div>
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-10 w-full max-w-[670px] place-items-center">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-10 w-full max-w-[670px] place-items-center">
           <HowWeWorkCards />
         </div>
       </WrapperDiv>
