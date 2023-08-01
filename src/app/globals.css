@@ -30,3 +30,17 @@ body {
 .grid-transition {
   transition: grid-template-rows 500ms;
 }
+
+@keyframes clipPathAnimation {
+  0% {
+    clip-path: circle(10% at 50% 50%);
+  }
+  100% {
+    clip-path: circle(50% at 50% 50%);
+  }
+}
+
+.test-animation {
+  clip-path: circle(50% at 50% 50%);
+  animation: clipPathAnimation 0.5s ease-in;
+}

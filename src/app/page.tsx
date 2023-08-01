@@ -2,6 +2,7 @@ import Faq from "./Components/Faq/Faq";
 import Features from "./Components/Features/Features";
 import Header from "./Components/Header/Header";
 import HowWeWork from "./Components/HowWeWork/HowWeWork";
+import Services from "./Components/Services/Services";
 import TestimonialsCarousel from "./Components/Testimonials/TestimonialsCarousel";
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Features />
       <TestimonialsCarousel />
       <Faq />
+      <Services />
     </>
   );
 }
