@@ -1,4 +1,5 @@
 import images from "@/app/Constants/images";
+import Card from "@/app/Utils/Card";
 import Image from "next/image";
 
 function FeaturesCards() {
@@ -32,14 +33,11 @@ function FeaturesCards() {
     <>
       {cardDetails.map(({ title, desc }, index) => {
         return (
-          <div
-            className="bg-white rounded min-h-[316px] text-black p-10 flex flex-col align-center justify-center gap-5"
-            key={index}
-          >
+          <Card key={index} className="bg-white text-black">
             <Image src={images[`featureIcon${index}`]} alt="Feature Icon" />
             <h3 className="font-bold text-fs-300">{title}</h3>
             <p>{desc}</p>
-          </div>
+          </Card>
         );
       })}
     </>
