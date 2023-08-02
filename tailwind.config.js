@@ -25,6 +25,17 @@ module.exports = {
       "fs-800": "var(--fs-800)",
       "lh-custom": "var(--lh-custom)",
     },
+    extend: {
+      keyframes: {
+        clipPath: {
+          "0%": { "clip-path": " circle(10% at 50% 50%)" },
+          "100%": { "clip-path": " circle(40% at 50% 50%)" },
+        },
+      },
+      animation: {
+        clipPath: "clipPath 0.2s ease-in",
+      },
+    },
   },
   plugins: [],
 };
