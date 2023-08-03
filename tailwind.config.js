@@ -29,11 +29,11 @@ module.exports = {
       keyframes: {
         clipPath: {
           "0%": { "clip-path": " circle(10% at 50% 50%)" },
-          "100%": { "clip-path": " circle(40% at 50% 50%)" },
+          "100%": { "clip-path": " circle(45% at 50% 50%)" },
         },
       },
       animation: {
-        clipPath: "clipPath 0.2s ease-in",
+        clipPath: "clipPath 0.4s ease-in",
       },
     },
   },
