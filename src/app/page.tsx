@@ -1,5 +1,6 @@
 import Faq from "./Components/Faq/Faq";
 import Features from "./Components/Features/Features";
+import GetInTouch from "./Components/GetInTouch/GetInTouch";
 import Header from "./Components/Header/Header";
 import HowWeWork from "./Components/HowWeWork/HowWeWork";
 import Services from "./Components/Services/Services";
@@ -13,6 +14,7 @@ export default function Home() {
       <TestimonialsCarousel />
       <Faq />
       <Services />
+      <GetInTouch/>
     </>
   );
 }
