@@ -7,9 +7,9 @@ interface IProps {
 function PrimaryButton({ children, color }: IProps) {
   return (
     <div
-      className={`flex items-center justify-center w-full h-[53px] rounded-[100px] border-[1px] border-${
+      className={`flex items-center justify-center w-full h-[53px] border-${
         color || "white"
-      } group`}
+      } border-[1px] rounded-[100px] group`}
     >
       <div className="relative flex gap-1 items-center justify-center h-[35px] w-[92%] overflow-hidden rounded-full">
         <div
