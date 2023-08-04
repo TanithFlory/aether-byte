@@ -27,19 +27,19 @@ function ContactForm() {
     });
   }
   return (
-    <form className="bg-[#1a1b3d] p-6 h-[400px] w-full max-w-[550px] flex-[1 1 100%]">
+    <form className="bg-[#1a1b3d] px-6 py-12 min-h-[500px] w-full max-w-[550px] flex-[1 1 100%]">
       <div className="flex flex-col gap-4 h-full ">
-        <div className="flex gap-4 flex-wrap items-center justify-center">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4">
           <BasicDetails onChange={formChangeHandler} formData={formData}/>
           <DropDown onChange={formChangeHandler} formData={formData}/>
         </div>
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col h-[150px] mb-4">
           <label className="mb-2 text-fs-100">Message</label>
           <TextInput
-            placeholder="Enter your full Email ID"
+            placeholder="Enter your message."
             type="text"
             textArea={true}
-            className="h-[70%] resize-none"
+            className="h-[80%] resize-none"
             maxLength={208}
           />
         </div>

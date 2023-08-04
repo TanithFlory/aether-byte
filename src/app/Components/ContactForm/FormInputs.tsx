@@ -8,10 +8,10 @@ export function BasicDetails({ onChange, formData }: IProps) {
   return ["Full Name", "Email ID", "Organization"].map((item, index) => {
     const itemIdentifier = item.toLowerCase().replace(" ", "_");
     return (
-      <div className="flex flex-col w-full max-w-[240px]" key={index}>
-        <label className="mb-2 text-fs-100">Your {item}</label>
+      <div className="flex flex-col w-full" key={index}>
+        <label className="mb-2 text-fs-100">{item}</label>
         <TextInput
-          placeholder={`Enter your full ${item}`}
+          placeholder={`Enter your ${item}`}
           type="text"
           name={itemIdentifier}
           value={formData?.[itemIdentifier as keyof object]}
@@ -24,7 +24,7 @@ export function BasicDetails({ onChange, formData }: IProps) {
 
 export function DropDown({ onChange }: IProps) {
   return (
-    <div className="flex flex-col w-full max-w-[240px]">
+    <div className="flex flex-col w-full">
       <label className="mb-2 text-fs-100">What is your query about?</label>
       <TextInput select={true} name="query" onChange={onChange}>
         {[
