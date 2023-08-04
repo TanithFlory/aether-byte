@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 function Navbar() {
   return (
-    <nav className="w-screen h-[92px] bg-primary fixed top-0 ">
+    <nav className="w-screen h-[92px] bg-primary-opaque fixed top-0 z-[9999]">
       <div className="w-full flex justify-around mx-auto h-full items-center">
         <Link href={"/home"}>
           {/* <Image src="" alt="Logo" /> */}

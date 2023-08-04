@@ -8,14 +8,17 @@ module.exports = {
   theme: {
     colors: {
       primary: "var(--clr-primary)",
+      'primary-opaque': "var(--clr-primary-opaque)",
       secondary: "var(--clr-secondary)",
       "clr-text": "var(--clr-text)",
       white: "var(--clr-white)",
       black: "var(--clr-black)",
       darkblue: "var(--clr-darkblue)",
       lightGreen: "var(--clr-l-green)",
+      gray: "var(--clr-gray)",
     },
     fontSize: {
+      "fs-100": "var(--fs-100)",
       "fs-200": "var(--fs-200)",
       "fs-300": "var(--fs-300)",
       "fs-400": "var(--fs-400)",

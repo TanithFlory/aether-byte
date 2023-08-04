@@ -4,13 +4,15 @@
 @tailwind utilities;
 :root {
   --clr-primary: #1c1e53;
+  --clr-primary-opaque:rgba(28, 30, 83, 0.6);
   --clr-secondary: #eef4fa;
   --clr-text: #bbbbcb;
   --clr-white: #fff;
   --clr-darkblue: #2405f2;
   --clr-black: #000;
   --clr-l-green: #51cb9c;
-  /* --step--2: clamp(0.69rem, calc(0.65rem + 0.19vw), 0.80rem); */
+  --clr-gray: #828282;
+  --fs-100: clamp(0.69rem, calc(0.65rem + 0.19vw), 0.80rem);
   --fs-200: clamp(0.78rem, calc(0.7rem + 0.39vw), 1rem);
   --fs-300: clamp(0.88rem, calc(0.74rem + 0.65vw), 1.25rem);
   --fs-400: clamp(0.98rem, calc(0.78rem + 1.01vw), 1.56rem);
