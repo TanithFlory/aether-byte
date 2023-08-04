@@ -3,13 +3,14 @@ import { BsArrowRight } from "react-icons/bs";
 interface IProps {
   children: React.ReactNode;
   color: string;
+  className?: string;
 }
-function PrimaryButton({ children, color }: IProps) {
+function PrimaryButton({ children, color, className }: IProps) {
   return (
     <div
       className={`flex items-center justify-center w-full h-[53px] border-${
         color || "white"
-      } border-[1px] rounded-[100px] group`}
+      } border-[1px] rounded-[100px] group ${className}`}
     >
       <div className="relative flex gap-1 items-center justify-center h-[35px] w-[92%] overflow-hidden rounded-full">
         <div

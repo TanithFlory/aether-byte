@@ -8,6 +8,7 @@ import featureIcon3 from "../assets/FeatureIcon (3).svg";
 import featureIcon4 from "../assets/FeatureIcon (4).svg";
 import featureIcon5 from "../assets/FeatureIcon (5).svg";
 import getInTouch from "../assets/get-in-touch.webp";
+import contactLinesBg from "../assets/contact-lines.svg";
 import { StaticImageData } from "next/image";
 interface Image {
   [key: string]: StaticImageData;
@@ -24,6 +25,7 @@ const images: Image = {
   featureIcon4,
   featureIcon5,
   getInTouch,
+  contactLinesBg,
 };
 
 export default images;
