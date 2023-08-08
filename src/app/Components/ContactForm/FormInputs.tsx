@@ -22,11 +22,11 @@ export function BasicDetails({ onChange, formData }: IProps) {
   });
 }
 
-export function DropDown({ onChange }: IProps) {
+export function DropDown({ onChange, formData }: IProps) {
   return (
     <div className="flex flex-col w-full">
       <label className="mb-2 text-fs-100">What is your query about?</label>
-      <TextInput select={true} name="query" onChange={onChange}>
+      <TextInput select={true} name="query" onChange={onChange} value={formData.query} >
         {[
           "Select from the dropdown",
           "App Development",
@@ -37,7 +37,7 @@ export function DropDown({ onChange }: IProps) {
           "Others",
         ].map((item, index) => {
           return (
-            <option value={item} key={index} selected={!index && true}>
+            <option value={item} key={index}>
               {item}
             </option>
           );
