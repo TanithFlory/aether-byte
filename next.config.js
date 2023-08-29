@@ -8,6 +8,10 @@ const nextConfig = {
       },
     ];
   },
+  reactStrictMode: true,
+  env: {
+    BASE_URL: process.env.NEXT_GEO_API,
+  },
 };
 
 module.exports = nextConfig;
