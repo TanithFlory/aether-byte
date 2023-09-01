@@ -2,88 +2,67 @@
 
 import { WrapperDiv } from "@/app/Utils/WrapperDiv";
 import CarouselControls from "./CarouselControls";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import testimonialsData from "./Testimonials.data";
 import TestimonialsCard from "./TestimonialsCard";
 
 function TestimonialsCarousel() {
   const carouselRef = useRef<HTMLDivElement>(null);
-  const [carouselScroll, setCarouselScroll] = useState(0);
   const [carouselButton, setCarouselButton] = useState({
     left: false,
     right: true,
-    count: 0,
   });
+  const [carouselCount, setCarouselCount] = useState(0);
+  const [scrollWidth, setScrollWidth] = useState(0);
+
   let autoScrollInterval: NodeJS.Timer;
 
   function resetCarousel() {
-    if (carouselRef.current) {
-      const { style } = carouselRef.current;
-      style.transform = "translateX(0px)";
-      setCarouselScroll(0);
-      console.log(carouselScroll);
-      setCarouselButton((prev) => ({
-        ...prev,
-        count: 0,
-      }));
-    }
+    if (!carouselRef.current) return;
+
+    const { style } = carouselRef.current;
+    style.transform = "translateX(0px)";
   }
 
-  function handleCarouselScroll(identifier: number) {
-    if (carouselRef.current) {
-      clearInterval(autoScrollInterval);
-      const { offsetWidth, style } = carouselRef.current;
+  const handleCarouselScroll = useCallback((type: string) => {
+    if (!carouselRef.current) return;
 
-      if (
-        carouselButton.count === testimonialsData.length - 1 &&
-        identifier === 3
-      ) {
-        resetCarousel();
-        return;
-      }
+    clearInterval(autoScrollInterval);
+    const { offsetWidth, style } = carouselRef.current;
 
-      setCarouselButton((prev) => ({
-        ...prev,
-        count: identifier ? ++prev.count : --prev.count,
-      }));
+    setCarouselCount((prev) => (type === "left" ? ++prev : --prev));
+    const translateXValue =
+      type === "left" ? scrollWidth - offsetWidth : scrollWidth + offsetWidth;
 
-      const translateXValue = identifier
-        ? carouselScroll - offsetWidth
-        : carouselScroll + offsetWidth;
+    setScrollWidth(translateXValue);
 
-      setCarouselScroll(translateXValue);
-
-      style.transform = `translateX(${translateXValue}px)`;
-    }
-  }
+    style.transform = `translateX(${translateXValue}px)`;
+  }, [scrollWidth]);
 
   useEffect(() => {
     const carouselLength = testimonialsData.length;
 
-    if (!carouselButton.count) {
+    //first testimonial
+    if (!carouselCount) {
       setCarouselButton((prev) => ({ ...prev, left: false }));
     }
-    if (carouselButton.count === carouselLength - 1) {
+    //last testimonial
+    if (carouselCount === carouselLength - 1) {
       setCarouselButton((prev) => ({ ...prev, right: false }));
     }
 
-    return () => {
-      setCarouselButton((prev) => ({ ...prev, right: true, left: true }));
-    };
-  }, [carouselButton.count]);
-
-  //auto-scroll for the carousel, resetting translateX values incase of window resize.
-  useEffect(() => {
     window.addEventListener("resize", resetCarousel);
-    autoScrollInterval = setInterval(() => {
-      handleCarouselScroll(3);
+
+    const autoScrollInterval = setInterval(() => {
+      resetCarousel();
     }, 10000);
 
     return () => {
       clearInterval(autoScrollInterval);
       window.removeEventListener("resize", resetCarousel);
+      setCarouselButton((prev) => ({ ...prev, right: true, left: true }));
     };
-  }, [carouselScroll]);
+  }, [carouselCount]);
 
   return (
     <section className="bg-secondary text-black p-4">
@@ -102,12 +81,13 @@ function TestimonialsCarousel() {
             ref={carouselRef}
           >
             {testimonialsData.map((data) => {
+              const { id, name, desc, role } = data;
               return (
                 <TestimonialsCard
-                  key={data.id}
-                  name={data.name}
-                  desc={data.desc}
-                  role={data.role}
+                  key={id}
+                  name={name}
+                  desc={desc}
+                  role={role}
                 />
               );
             })}
