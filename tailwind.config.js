@@ -8,13 +8,14 @@ module.exports = {
   theme: {
     colors: {
       primary: "var(--clr-primary)",
-      'primary-opaque': "var(--clr-primary-opaque)",
+      "primary-opaque": "var(--clr-primary-opaque)",
       secondary: "var(--clr-secondary)",
       "clr-text": "var(--clr-text)",
       white: "var(--clr-white)",
       black: "var(--clr-black)",
       darkblue: "var(--clr-darkblue)",
       lightGreen: "var(--clr-l-green)",
+      purple: "var(--clr-purple)",
       gray: "var(--clr-gray)",
     },
     fontSize: {
