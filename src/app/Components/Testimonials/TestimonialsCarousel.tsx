@@ -8,11 +8,12 @@ import TestimonialsCard from "./TestimonialsCard";
 
 function TestimonialsCarousel() {
   const carouselRef = useRef<HTMLDivElement>(null);
-  const [carouselButton, setCarouselButton] = useState({
+  const buttonInitialState = {
     left: false,
     right: true,
-  });
-  const [carouselCount, setCarouselCount] = useState(0);
+  };
+  const [carouselButton, setCarouselButton] = useState(buttonInitialState);
+  const [carouselCount, setCarouselCount] = useState(1);
   const [scrollWidth, setScrollWidth] = useState(0);
 
   let autoScrollInterval: NodeJS.Timer;
@@ -22,24 +23,35 @@ function TestimonialsCarousel() {
 
     const { style } = carouselRef.current;
     style.transform = "translateX(0px)";
+    setScrollWidth(0);
+    setCarouselButton(buttonInitialState);
+    setCarouselCount(1);
   }
 
-  const handleCarouselScroll = useCallback((type: string) => {
-    if (!carouselRef.current) return;
+  const handleCarouselScroll = useCallback(
+    (type: string) => {
+      if (!carouselRef.current) return;
 
-    clearInterval(autoScrollInterval);
-    const { offsetWidth, style } = carouselRef.current;
+      clearInterval(autoScrollInterval);
+      const { offsetWidth, style } = carouselRef.current;
 
-    setCarouselCount((prev) => (type === "left" ? ++prev : --prev));
-    const translateXValue =
-      type === "left" ? scrollWidth - offsetWidth : scrollWidth + offsetWidth;
+      setCarouselCount((prev) => (type === "left" ? ++prev : --prev));
 
-    setScrollWidth(translateXValue);
+      if (carouselCount === testimonialsData.length) return resetCarousel();
 
-    style.transform = `translateX(${translateXValue}px)`;
-  }, [scrollWidth]);
+      const translateXValue =
+        type === "left" ? scrollWidth - offsetWidth : scrollWidth + offsetWidth;
+
+      setScrollWidth(translateXValue);
+
+      style.transform = `translateX(${translateXValue}px)`;
+    },
+    [scrollWidth]
+  );
 
   useEffect(() => {
+    window.addEventListener("resize", resetCarousel);
+
     const carouselLength = testimonialsData.length;
 
     //first testimonial
@@ -47,14 +59,12 @@ function TestimonialsCarousel() {
       setCarouselButton((prev) => ({ ...prev, left: false }));
     }
     //last testimonial
-    if (carouselCount === carouselLength - 1) {
+    if (carouselCount === carouselLength) {
       setCarouselButton((prev) => ({ ...prev, right: false }));
     }
 
-    window.addEventListener("resize", resetCarousel);
-
     const autoScrollInterval = setInterval(() => {
-      resetCarousel();
+      handleCarouselScroll("left");
     }, 10000);
 
     return () => {
