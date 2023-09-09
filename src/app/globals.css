@@ -13,6 +13,7 @@
   --clr-l-green: #51cb9c;
   --clr-gray: #828282;
   --clr-purple: #5c1db9;
+  --clr-hover:#E3E6F3;
   --fs-100: clamp(0.69rem, calc(0.65rem + 0.19vw), 0.8rem);
   --fs-200: clamp(0.78rem, calc(0.7rem + 0.39vw), 1rem);
   --fs-300: clamp(0.88rem, calc(0.74rem + 0.65vw), 1.25rem);
@@ -27,6 +28,7 @@
 body {
   font-family: "Manrope", sans-serif;
   color: white;
+  overflow-x: hidden;
 }
 
 .grid-transition {

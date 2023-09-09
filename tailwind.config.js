@@ -17,6 +17,7 @@ module.exports = {
       lightGreen: "var(--clr-l-green)",
       purple: "var(--clr-purple)",
       gray: "var(--clr-gray)",
+      hover: "var(--clr-hover)",
     },
     fontSize: {
       "fs-100": "var(--fs-100)",

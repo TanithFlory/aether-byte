@@ -1,7 +1,7 @@
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 interface IProps {
-  handleCarouselScroll(identifier: string): any;
+  handleCarouselScroll(identifier: string): void;
   carouselButton: {
     left: boolean;
     right: boolean;
