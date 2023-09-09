@@ -57,7 +57,7 @@ const navLinkData = [
 ];
 function Navbar() {
   return (
-    <nav className="w-screen h-[70px] bg-secondary fixed top-0 z-[9999]">
+    <nav className="w-screen h-[70px] bg-secondary sticky top-0 z-[9999] shadow-md">
       <div className="max-w-[1200px] w-full flex justify-between mx-auto h-full items-center">
         <a href={"/home"}>{/* <Image src="" alt="Logo" /> */}</a>
         <ul className="flex gap-[1.2rem] text-clr-text text-fs-200 decoration no-underline list-none font-bold h-full">

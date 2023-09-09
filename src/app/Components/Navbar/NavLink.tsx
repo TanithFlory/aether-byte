@@ -12,7 +12,7 @@ interface IProps {
 
 function NavLink({ title, dropdownItems }: IProps) {
   return (
-    <li className="pl-[10px] pr-[6px] flex items-center text-primary cursor-pointer hover:bg-[#E3E6F3] relative custom-navlink-hover group">
+    <li className="pl-[10px] pr-[6px] flex items-center text-primary cursor-pointer hover:bg-hover relative custom-navlink-hover group">
       <div className="text-fs-200">{title}</div>
       <div className="group-hover:rotate-180">
         {dropdownItems.length ? (
