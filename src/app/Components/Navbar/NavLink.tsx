@@ -20,7 +20,7 @@ function NavLink({ title, dropdownItems }: IProps) {
         ) : null}
       </div>
       {dropdownItems.length ? (
-        <ul className="cursor-default shadow-lg rounded-bl-md rounded-br-md max-w-[1200px] flex gap-4 p-[18px] bg-secondary transition-all duration-500 ease-in-out opacity-0 invisible group-hover:visible absolute top-[70px] left-[50%] translate-x-[-50%]">
+        <ul className="cursor-default shadow-lg rounded-bl-md rounded-br-md max-w-[1200px] flex gap-4 p-[18px] bg-white transition-all duration-500 ease-in-out opacity-0 invisible group-hover:visible absolute top-[70px] left-[50%] translate-x-[-50%]">
           {dropdownItems?.map((data, index) => {
             return (
               <li key={index}>
