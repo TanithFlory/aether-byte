@@ -1,16 +1,16 @@
-import useBeforeRender from "@/app/CustomHooks/useBeforeRender";
 import { useEffect, useState } from "react";
 
-function useDimensions(length: number) {
+function useDimensions(length: number, resetCarousel: () => void) {
   const [dimensions, setDimensions] = useState({
-    card: "0",
-    container: "0",
+    card: "320",
+    container: "3000",
     items: 0,
   });
 
   function getWidth() {
+    resetCarousel();
     const { innerWidth } = window;
-    let width: string | number = 0;
+    let width: string | number;
     let items: number;
 
     switch (true) {
@@ -30,7 +30,7 @@ function useDimensions(length: number) {
         items = 3;
         width = 1200 / items;
     }
-    width = Math.floor(width as number).toFixed();
+    width = Math.floor(width).toString();
 
     setDimensions({
       card: width,
@@ -39,9 +39,8 @@ function useDimensions(length: number) {
     });
   }
 
-  useBeforeRender(getWidth);
-
   useEffect(() => {
+    getWidth();
     window.addEventListener("resize", getWidth);
 
     return () => {

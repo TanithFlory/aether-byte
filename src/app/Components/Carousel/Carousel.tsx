@@ -6,12 +6,11 @@ import carouselData from "./dummyData";
 import useDimensions from "./useDimensions";
 
 function Carousel() {
-  const dimensions = useDimensions(carouselData.length);
+  const carouselRef = useRef<null | HTMLDivElement>(null);
+  const dimensions = useDimensions(carouselData.length, resetCarousel);
   const scrollValue = Number(dimensions.card);
   const maxTranslateX =
     -(carouselData.length - dimensions.items) * scrollValue - 3;
-
-  const carouselRef = useRef<null | HTMLDivElement>(null);
 
   const [prevWidth, setPrevWidth] = useState(0);
 
@@ -19,7 +18,11 @@ function Carousel() {
     left: !(prevWidth === 0),
     right: true,
   };
-
+  function resetCarousel() {
+    setPrevWidth(0);
+    if (!carouselRef.current) return;
+    carouselRef.current.style.transform = "translateX(0px)";
+  }
   function handleClick(type: string) {
     if (!carouselRef.current) return;
 
