@@ -9,4 +9,12 @@ export type IContactForm = {
   organization: string;
   query: string;
   message: string;
+};
+
+export interface ICarouselCard {
+  title: string;
+  description: string;
+  image: string;
+  id: number;
+  link?: boolean;
 }

@@ -5,6 +5,7 @@
 :root {
   --clr-primary: #1c1e53;
   --clr-primary-opaque: rgba(28, 30, 83, 0.6);
+  --clr-primary-opaque: rgba(28, 30, 83, 0.6);
   --clr-secondary: #eef4fa;
   --clr-text: #bbbbcb;
   --clr-white: #fff;
@@ -12,6 +13,8 @@
   --clr-black: #000;
   --clr-l-green: #51cb9c;
   --clr-gray: #828282;
+  --clr-purple: #5c1db9;
+  --clr-hover:#E3E6F3;
   --fs-100: clamp(0.69rem, calc(0.65rem + 0.19vw), 0.8rem);
   --fs-200: clamp(0.78rem, calc(0.7rem + 0.39vw), 1rem);
   --fs-300: clamp(0.88rem, calc(0.74rem + 0.65vw), 1.25rem);
@@ -26,16 +29,31 @@
 body {
   font-family: "Manrope", sans-serif;
   color: white;
+  overflow-x: hidden;
 }
 
 .grid-transition {
   transition: grid-template-rows 500ms;
 }
-
-input,
-input:focus,
-textarea,
-textarea:focus,
-select {
-  outline: 0;
+.custom-navlink-hover{
+  transition: all 0.3s ease-in-out;
+}
+.custom-navlink-hover::after {
+  content: "";
+  background: var(--clr-purple);
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+}
+.custom-navlink-hover:hover::after {
+  opacity: 1;
+}
+.custom-navlink-hover:hover ul{
+  opacity: 1;
 }

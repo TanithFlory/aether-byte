@@ -8,14 +8,16 @@ module.exports = {
   theme: {
     colors: {
       primary: "var(--clr-primary)",
-      'primary-opaque': "var(--clr-primary-opaque)",
+      "primary-opaque": "var(--clr-primary-opaque)",
       secondary: "var(--clr-secondary)",
       "clr-text": "var(--clr-text)",
       white: "var(--clr-white)",
       black: "var(--clr-black)",
       darkblue: "var(--clr-darkblue)",
       lightGreen: "var(--clr-l-green)",
+      purple: "var(--clr-purple)",
       gray: "var(--clr-gray)",
+      hover: "var(--clr-hover)",
     },
     fontSize: {
       "fs-100": "var(--fs-100)",
@@ -34,9 +36,14 @@ module.exports = {
           "0%": { "clip-path": " circle(10% at 50% 50%)" },
           "100%": { "clip-path": " circle(45% at 50% 50%)" },
         },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: 1 },
+        },
       },
       animation: {
         clipPath: "clipPath 0.4s ease-in",
+        fadeIn: "fadeIn 0.5s ease-in",
       },
     },
   },
