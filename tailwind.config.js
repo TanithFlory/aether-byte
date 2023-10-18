@@ -36,9 +36,14 @@ module.exports = {
           "0%": { "clip-path": " circle(10% at 50% 50%)" },
           "100%": { "clip-path": " circle(45% at 50% 50%)" },
         },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: 1 },
+        },
       },
       animation: {
         clipPath: "clipPath 0.4s ease-in",
+        fadeIn: "fadeIn 0.5s ease-in",
       },
     },
   },

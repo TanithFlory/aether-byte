@@ -12,6 +12,9 @@ const nextConfig = {
   env: {
     BASE_URL: process.env.NEXT_GEO_API,
   },
+  images: {
+    domains: ["images.pexels.com"],
+  },
 };
 
 module.exports = nextConfig;
