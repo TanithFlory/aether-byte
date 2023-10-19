@@ -4,7 +4,7 @@ interface IProps {
 
 function ArticleNavbar({ links }: IProps) {
   return (
-    <div className="w-full bg-secondary sticky">
+    <div className="w-full bg-white shadow-md sticky top-[70px]">
         <ul className="max-w-[1200px] mx-auto flex items-center justify-center text-primary">
           {links.map((item, index) => {
             return (
