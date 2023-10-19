@@ -1,11 +1,11 @@
-import { WrapperDiv } from "@/app/Utils/WrapperDiv";
+import { WrapperDiv, SectionWrapper } from "@/app/Utils/Wrappers";
 import images from "@/app/Constants/images";
 import Image from "next/image";
 import PrimaryButton from "@/app/Utils/PrimaryButton";
 import Link from "next/link";
 function GetInTouch() {
   return (
-    <section className="bg-primary text-white">
+    <SectionWrapper className="bg-primary text-white">
       <WrapperDiv className="py-24">
         <div className="relative h-[300px] w-full ">
           <Image
@@ -23,7 +23,7 @@ function GetInTouch() {
           </div>
         </div>
       </WrapperDiv>
-    </section>
+    </SectionWrapper>
   );
 }
 

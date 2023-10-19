@@ -1,4 +1,4 @@
-import { WrapperDiv } from "@/app/Utils/WrapperDiv";
+import { WrapperDiv } from "@/app/Utils/Wrappers";
 import { ICarouselCard } from "@/app/types";
 import Image from "next/image";
 

@@ -1,10 +1,9 @@
-import { WrapperDiv } from "@/app/Utils/WrapperDiv";
+import { WrapperDiv, CardsWrapper, SectionWrapper } from "@/app/Utils/Wrappers";
 import FeaturesCards from "./FeaturesCards";
-import CardsWrapper from "@/app/Utils/CardWrapper";
 
 function Features() {
   return (
-    <section className="bg-primary text-white px-4 ">
+    <SectionWrapper className="bg-primary text-white">
       <WrapperDiv className="flex-col py-24">
         <div className="text-center">
           <span className="font-bold">Features</span>
@@ -16,7 +15,7 @@ function Features() {
           <FeaturesCards />
         </CardsWrapper>
       </WrapperDiv>
-    </section>
+    </SectionWrapper>
   );
 }
 

@@ -4,6 +4,7 @@ import CarouselCard from "./CarouselCard";
 import CarouselControls from "./CarouselControls";
 import carouselData from "./dummyData";
 import useDimensions from "./useDimensions";
+import { SectionWrapper } from "@/app/Utils/Wrappers";
 
 function Carousel() {
   const carouselRef = useRef<null | HTMLDivElement>(null);
@@ -43,7 +44,7 @@ function Carousel() {
   }
 
   return (
-    <section className="py-10 px-4 text-black">
+    <SectionWrapper className="text-black">
       <div className="max-w-[1200px] mx-auto relative overflow-hidden">
         <div>Title</div>
         <div style={{ width: `${dimensions.container}px` }}>
@@ -71,7 +72,7 @@ function Carousel() {
           />
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 }
 

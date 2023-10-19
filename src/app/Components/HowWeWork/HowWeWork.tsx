@@ -1,11 +1,11 @@
 import images from "@/app/Constants/images";
 import Image from "next/image";
-import { WrapperDiv } from "@/app/Utils/WrapperDiv";
 import HowWeWorkCards from "./HowWeWorkCards";
+import { SectionWrapper, WrapperDiv } from "@/app/Utils/Wrappers";
 
 function HowWeWork() {
   return (
-    <section className="bg-secondary text-black p-1">
+    <SectionWrapper className="bg-secondary text-black p-1">
       <WrapperDiv className="gap-20 py-24">
         <div className="max-w-[405px] flex flex-col gap-4">
           <h2 className="text-fs-700 font-bold">How we work</h2>
@@ -24,7 +24,7 @@ function HowWeWork() {
           <HowWeWorkCards />
         </div>
       </WrapperDiv>
-    </section>
+    </SectionWrapper>
   );
 }
 

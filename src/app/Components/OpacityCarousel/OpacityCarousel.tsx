@@ -4,7 +4,7 @@ import Link from "next/link";
 import data from "./dummyData";
 import OpacityCarouselCard from "./OpacityCarouselCard";
 import { useEffect, useState } from "react";
-import { WrapperDiv } from "@/app/Utils/WrapperDiv";
+import { WrapperDiv } from "@/app/Utils/Wrappers";
 
 function OpacityCarousel() {
   const [currentSlide, setCurrentSlide] = useState(1);

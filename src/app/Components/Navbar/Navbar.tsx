@@ -14,23 +14,14 @@ const navLinkData = [
         items: ["Web Development", "App Development"],
       },
       {
-        title: "Digital Process Operations",
-        items: ["Digital Content", "Cognitive Automation", "Lending Solutions"],
+        title: "Digital Innovations",
+        items: ["Blockchain Development", "Artificial Intelligence"],
       },
     ],
   },
   {
     title: "About us",
-    dropdownItems: [
-      {
-        title: "About us",
-        items: ["Newsroom", "Global Presence", "Strategies"],
-      },
-      {
-        title: "​​‎",
-        items: ["Newsroom", "Global Presence", "Strategies"],
-      },
-    ],
+    dropdownItems: [],
   },
   {
     title: "Trends and Insights",

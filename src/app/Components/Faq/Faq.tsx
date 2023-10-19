@@ -1,10 +1,11 @@
 "use client";
-import { WrapperDiv } from "@/app/Utils/WrapperDiv";
+import { WrapperDiv } from "@/app/Utils/Wrappers";
 import faqData from "./Faq.data";
 import FaqCard from "./FaqCard";
+import { SectionWrapper } from "@/app/Utils/Wrappers";
 function Faq() {
   return (
-    <section className="bg-primary text-white px-4">
+    <SectionWrapper className="bg-primary text-white">
       <WrapperDiv className="py-24 gap-6">
         <div className="max-w-[327px]">
           <h2 className="text-fs-600 font-bold">Frequently asked questions</h2>
@@ -17,7 +18,7 @@ function Faq() {
           })}
         </div>
       </WrapperDiv>
-    </section>
+    </SectionWrapper>
   );
 }
 

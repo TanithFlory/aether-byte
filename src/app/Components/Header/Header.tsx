@@ -1,6 +1,6 @@
 import Image from "next/image";
 import images from "@/app/Constants/images";
-import { WrapperDiv } from "@/app/Utils/WrapperDiv";
+import { WrapperDiv } from "@/app/Utils/Wrappers";
 function Header() {
   return (
     <header className="bg-primary min-h-[700px]">

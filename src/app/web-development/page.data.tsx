@@ -4,7 +4,6 @@ const webDevelopmentData = {
   links: [
     "Overview",
     "Solutions",
-    "Case Studies",
     "Insights",
     "Events",
     "Description",

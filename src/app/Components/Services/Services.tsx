@@ -1,7 +1,6 @@
-import { WrapperDiv } from "@/app/Utils/WrapperDiv";
+import { WrapperDiv, CardsWrapper } from "@/app/Utils/Wrappers";
 import servicesData from "./ServicesData";
 import ServiceCard from "./ServiceCard";
-import CardsWrapper from "@/app/Utils/CardWrapper";
 
 function Services() {
   return (

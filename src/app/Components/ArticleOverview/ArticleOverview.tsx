@@ -1,4 +1,4 @@
-import { WrapperDiv } from "@/app/Utils/WrapperDiv";
+import { WrapperDiv } from "@/app/Utils/Wrappers";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
 
