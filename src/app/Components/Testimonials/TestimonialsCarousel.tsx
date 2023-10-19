@@ -76,7 +76,7 @@ function TestimonialsCarousel() {
 
   return (
     <SectionWrapper className="bg-secondary text-black">
-      <WrapperDiv className="py-24 gap-6">
+      <WrapperDiv className="gap-6">
         <div className="max-w-[327px]">
           <h2 className="text-fs-600 font-bold">
             What our clients say about us

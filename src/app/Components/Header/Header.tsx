@@ -4,7 +4,7 @@ import { WrapperDiv } from "@/app/Utils/Wrappers";
 function Header() {
   return (
     <header className="bg-primary min-h-[700px]">
-      <WrapperDiv className="gap-4 pb-3 items-center min-h-[700px] pt-[92px]">
+      <WrapperDiv className="gap-4 !py-0 pb-3 items-center min-h-[700px] pt-[92px]">
         <div className="max-w-[582px]">
           <h1 className="text-fs-800 font-bold text-center lg:leading-[72px]">
             Providing stellar tech solutions for early startups!

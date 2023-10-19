@@ -8,7 +8,7 @@ function Map() {
       center={[41.91065, -87.64798]}
       zoom={13}
       scrollWheelZoom={false}
-      className="w-full max-w-[700px] rounded-sm"
+      className="w-full max-w-[700px] rounded-sm min-h-[450px]"
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

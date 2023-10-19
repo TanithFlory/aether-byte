@@ -6,7 +6,7 @@ import Link from "next/link";
 function GetInTouch() {
   return (
     <SectionWrapper className="bg-primary text-white">
-      <WrapperDiv className="py-24">
+      <WrapperDiv>
         <div className="relative h-[300px] w-full ">
           <Image
             src={images.getInTouch.src}

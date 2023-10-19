@@ -5,7 +5,7 @@ import ServiceCard from "./ServiceCard";
 function Services() {
   return (
     <section className="bg-secondary text-black px-4">
-      <WrapperDiv className="py-24">
+      <WrapperDiv>
         <div className="text-center">
           <span className="font-bold text-fs-300">Our Services</span>
           <div className="flex justify-center items-center gap-4 flex-wrap">

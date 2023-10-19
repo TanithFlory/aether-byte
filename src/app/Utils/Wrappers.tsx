@@ -17,7 +17,7 @@ export function CardsWrapper({ children, className }: IWrapper) {
 export function WrapperDiv({ children, className }: IWrapper) {
   return (
     <div
-      className={`${className} max-w-[1200px] mx-auto flex  justify-center flex-wrap`}
+      className={`${className} max-w-[1200px] mx-auto flex  justify-center flex-wrap py-24`}
     >
       {children}
     </div>

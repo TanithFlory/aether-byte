@@ -4,7 +4,7 @@ import FeaturesCards from "./FeaturesCards";
 function Features() {
   return (
     <SectionWrapper className="bg-primary text-white">
-      <WrapperDiv className="flex-col py-24">
+      <WrapperDiv className="flex-col">
         <div className="text-center">
           <span className="font-bold">Features</span>
           <h2 className="text-fs-700 max-w-[630px] mx-auto font-bold mb-11">

@@ -6,7 +6,7 @@ import { SectionWrapper } from "@/app/Utils/Wrappers";
 function Faq() {
   return (
     <SectionWrapper className="bg-primary text-white">
-      <WrapperDiv className="py-24 gap-6">
+      <WrapperDiv className="gap-6">
         <div className="max-w-[327px]">
           <h2 className="text-fs-600 font-bold">Frequently asked questions</h2>
         </div>

@@ -5,7 +5,7 @@ function OfficeLocation() {
   const Map = dynamic(() => import("./Map"), { ssr: false });
 
   return (
-    <SectionWrapper className="bg-secondary py-24">
+    <SectionWrapper className="bg-secondary">
       <WrapperDiv className="gap-5">
         <div className="w-full max-w-[450px]  text-primary bg-primary rounded-sm">
           <InformationCards />
