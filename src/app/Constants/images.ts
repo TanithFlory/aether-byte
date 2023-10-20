@@ -15,6 +15,7 @@ import banking2 from "../assets/banking2.webp";
 import banking3 from "../assets/banking3.webp";
 import banking4 from "../assets/banking4.webp";
 import banking5 from "../assets/banking5.webp";
+import workStats from "../assets/work_stats.svg";
 import { StaticImageData } from "next/image";
 
 interface Image {
@@ -39,6 +40,7 @@ const images: Image = {
   banking3,
   banking4,
   banking5,
+  workStats,
 } as const;
 
 export default images;

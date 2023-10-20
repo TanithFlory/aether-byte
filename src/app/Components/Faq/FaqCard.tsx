@@ -4,14 +4,15 @@ interface IProps {
   question: string;
   answer: string;
   id: number;
+  length: number;
 }
 
-function FaqCard({ question, answer, id }: IProps) {
+function FaqCard({ question, answer, id, length }: IProps) {
   const [expand, setExpand] = useState(false);
   return (
     <div
       className={`pb-4 mb-4 border-b-[#808080] ${
-        id < 5 ? "border-b-[1px]" : ""
+        id < length ? "border-b-[1px]" : ""
       }`}
     >
       <div
@@ -21,12 +22,8 @@ function FaqCard({ question, answer, id }: IProps) {
         onClick={() => setExpand((prev) => !prev)}
       >
         <div className="flex">
-          <div className="text-fs-400 font-bold">
-            0{id}
-          </div>
-          <div className="text-fs-400 font-bold px-10">
-            {question}
-          </div>
+          <div className="text-fs-400 font-bold">0{id}</div>
+          <div className="text-fs-400 font-bold px-10">{question}</div>
         </div>
         <div
           className={`scale-150 transition-transform duration-500 ease-in-out ${

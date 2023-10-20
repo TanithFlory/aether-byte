@@ -13,7 +13,7 @@
   --clr-l-green: #51cb9c;
   --clr-gray: #828282;
   --clr-purple: #5c1db9;
-  --clr-hover:#E3E6F3;
+  --clr-hover: #e3e6f3;
   --fs-100: clamp(0.69rem, calc(0.65rem + 0.19vw), 0.8rem);
   --fs-200: clamp(0.78rem, calc(0.7rem + 0.39vw), 1rem);
   --fs-300: clamp(0.88rem, calc(0.74rem + 0.65vw), 1.25rem);
@@ -34,7 +34,7 @@ body {
 .grid-transition {
   transition: grid-template-rows 500ms;
 }
-.custom-navlink-hover{
+.custom-navlink-hover {
   transition: all 0.3s ease-in-out;
 }
 .custom-navlink-hover::after {
@@ -53,6 +53,33 @@ body {
 .custom-navlink-hover:hover::after {
   opacity: 1;
 }
-.custom-navlink-hover:hover ul{
+.custom-navlink-hover:hover ul {
   opacity: 1;
+}
+
+.gradient-text {
+  background: -webkit-linear-gradient(
+    342.79deg,
+    #7abef7 -17.3%,
+    #4080f5 37.41%,
+    #7747d5 71.49%,
+    #572ac2 99.4%
+  );
+  background: -o-linear-gradient(
+    342.79deg,
+    #7abef7 -17.3%,
+    #4080f5 37.41%,
+    #7747d5 71.49%,
+    #572ac2 99.4%
+  );
+  background: linear-gradient(
+    107.21deg,
+    #7abef7 -17.3%,
+    #4080f5 37.41%,
+    #7747d5 71.49%,
+    #572ac2 99.4%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

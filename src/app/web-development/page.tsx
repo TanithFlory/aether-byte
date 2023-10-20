@@ -2,6 +2,7 @@ import ArticleNavbar from "../Components/ArticleNavbar/ArticleNavbar";
 import ArticleOverview from "../Components/ArticleOverview/ArticleOverview";
 import Carousel from "../Components/Carousel/Carousel";
 import OpacityCarousel from "../Components/OpacityCarousel/OpacityCarousel";
+import QnA from "../Components/QnA/QnA";
 import WorkStats from "../Components/WorkStats/WorkStats";
 import webDevelopmentData from "./page.data";
 
@@ -25,6 +26,35 @@ function WebDevelopment() {
           { count: "210+", countName: "Delivery Centers" },
           { count: "210+", countName: "Delivery Centers" },
           { count: "210+", countName: "Delivery Centers" },
+        ]}
+      />
+      <QnA
+        qnaCards={[
+          {
+            question: "What is digital workplace?",
+            answer:
+              "Gartner defines Digital Workplace as one that enables new, more effective ways of working; raises employee engagement and agility; and exploits consumer-oriented styles and technologies.",
+          },
+          {
+            question: "What is digital workplace?",
+            answer:
+              "Gartner defines Digital Workplace as one that enables new, more effective ways of working; raises employee engagement and agility; and exploits consumer-oriented styles and technologies.",
+          },
+          {
+            question: "What is digital workplace?",
+            answer:
+              "Gartner defines Digital Workplace as one that enables new, more effective ways of working; raises employee engagement and agility; and exploits consumer-oriented styles and technologies.",
+          },
+          {
+            question: "What is digital workplace?",
+            answer:
+              "Gartner defines Digital Workplace as one that enables new, more effective ways of working; raises employee engagement and agility; and exploits consumer-oriented styles and technologies.",
+          },
+          {
+            question: "What is digital workplace?",
+            answer:
+              "Gartner defines Digital Workplace as one that enables new, more effective ways of working; raises employee engagement and agility; and exploits consumer-oriented styles and technologies.",
+          },
         ]}
       />
     </section>

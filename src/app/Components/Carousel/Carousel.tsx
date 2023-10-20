@@ -44,7 +44,7 @@ function Carousel() {
   }
 
   return (
-    <SectionWrapper className="text-black">
+    <SectionWrapper className="text-black py-24">
       <div className="max-w-[1200px] mx-auto relative overflow-hidden">
         <div>Title</div>
         <div style={{ width: `${dimensions.container}px` }}>
