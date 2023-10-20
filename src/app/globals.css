@@ -14,6 +14,7 @@
   --clr-gray: #828282;
   --clr-purple: #5c1db9;
   --clr-hover: #e3e6f3;
+  --clr-transparent: rgba(0, 0, 0, 0);
   --fs-100: clamp(0.69rem, calc(0.65rem + 0.19vw), 0.8rem);
   --fs-200: clamp(0.78rem, calc(0.7rem + 0.39vw), 1rem);
   --fs-300: clamp(0.88rem, calc(0.74rem + 0.65vw), 1.25rem);

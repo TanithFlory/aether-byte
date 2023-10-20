@@ -10,7 +10,7 @@ interface IProps {
 
 function ArticleOverview({ content, image, id }: IProps) {
   return (
-    <article className="bg-secondary text-black py-10 px-4" id={id}>
+    <article className="bg-primary text-white py-10 px-4" id={id}>
       <WrapperDiv className="flex-col">
         <div className="">
           <h3 className="font-bold text-fs- mb-2">Overview</h3>

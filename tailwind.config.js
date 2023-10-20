@@ -18,6 +18,7 @@ module.exports = {
       purple: "var(--clr-purple)",
       gray: "var(--clr-gray)",
       hover: "var(--clr-hover)",
+      transparent:"var(--clr-transparent)"
     },
     fontSize: {
       "fs-100": "var(--fs-100)",

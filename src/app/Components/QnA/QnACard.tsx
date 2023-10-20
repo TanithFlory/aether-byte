@@ -12,9 +12,7 @@ function QnACard({ question, answer }: IProps) {
   const [expand, setExpand] = useState(false);
   return (
     <div
-      className={`border-b-[#808080] bg-white text-black  rounded-sm h-max hover:bg-secondary ${
-        expand ? "mb-7" : ""
-      }`}
+      className="border-b-[#808080] bg-white text-black  rounded-sm h-max hover:bg-secondary mb-4"
     >
       <div
         className={`flex items-center justify-between cursor-pointer hover:text-lightGreen ${
@@ -38,11 +36,11 @@ function QnACard({ question, answer }: IProps) {
         </div>
       </div>
       <div
-        className={`grid-transition py-4 px-7 font-bold grid grid-rows-[0fr] bg-primary ${
-          expand ? "grid-rows-[1fr] bg-white" : ""
+        className={`grid-transition px-7 py-[4px] font-bold grid grid-rows-[0fr]  ${
+          expand ? "grid-rows-[1fr]" : ""
         }`}
       >
-        <p className="text-fs-200 font-light overflow-hidden">{answer}</p>
+        <p className="text-fs-200 overflow-hidden border-transparent font-bold">{answer}</p>
       </div>
     </div>
   );
