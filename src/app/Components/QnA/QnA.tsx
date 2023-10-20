@@ -11,19 +11,13 @@ interface IProps {
 }
 
 function QnA({ qnaCards }: IProps) {
-  console.log(
-    0,
-    Math.round(qnaCards.length / 2),
-    Math.round(qnaCards.length / 2),
-    qnaCards.length
-  );
   return (
     <SectionWrapper className="text-white bg-primary">
       <WrapperDiv>
-        <div>
+        <div className="w-full pl-4 mb-8 text-fs-500">
           <h2>Q&A</h2>
         </div>
-        <div className="flex max-md:flex-wrap">
+        <div className="flex  max-md:flex-wrap">
           <div className="px-4">
             {qnaCards
               .slice(0, Math.round(qnaCards.length / 2))
